@@ -1,8 +1,17 @@
 
 /*---*/
-/* Tokyo Terminal Theme for Obsidian v1.5.0 */
-/* Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic */
+/* Type: Theme */
+/* Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic. */
+/* Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd" */
+/* Creation: 2026-01-15 */
+/* Update: 2026-06-13 */
+/* Contributors: [神縁] */
+/* Version: !!str 1.5.5 */
 /*---*/
+
+/*-----------------------------------------*/
+/*## Variables */
+/*-----------------------------------------*/
 
 .theme-dark {
   color-scheme: dark;
@@ -28,37 +37,40 @@
 	--color-oldRed: #d66666;
 	--color-Pink: #F1ADFF;
 	--color-Gold: #E3E9AE;
-  --color-red: var(--color-ansiBrightRed);
-  --color-orange: var(--color-ansiYellow);
-  --color-yellow: var(--color-ansiBrightYellow);
-  --color-green: var(--color-ansiGreen);
-  --color-cyan: var(--color-ansiBrightCyan);
-  --color-blue: var(--color-ansiBlue);
-  --color-purple: var(--color-ansiBrightMagenta);
-  --color-pink: var(--color-ansiRed);
 
-  --window-border-color: #34e2e2;
+  --border-color: var(--color-foreground);
+
+  --window-border-color: var(--border-color);
   --window-border: 1px solid var(--window-border-color);
 
   --font-monospace-theme: "JetBrains Mono", Menlo, SFMono-Regular, Consolas,
   "Fira Coda", SFMono-Regular, "Roboto Mono", "Source Code Pro", monospace;
   
-  /* Fixed UI */
-  --background-secondary: #2a2436; /* Ribbon, codeblocks and sidebar */
-  --background-secondary-alt: #2a2436; /* Menubar */
-  --button-foreground: #ECEFF4;
-  --button-color: #fe8019;
-  --button-color-alt: #0F675B;
-  --border-color: #34e2e2;
+  /*### Fixed UI */
+  
+  --background-secondary: var(--color-background); /* Ribbon, codeblocks and sidebar */
+  --background-secondary-alt: var(--color-background); /* Menubar */
 
-  /* Relative UI */
+  /*### Mobile UI Buttons */
+
+  --button-foreground-1: #fe8019;
+  --button-foreground-2: #FFE61C;
+  --button-foreground-3: #34e2e2;
+  --button-background-color: color-mix(in srgb, var(--hr-color) 20%, transparent);
+  --button-background-color-alt: color-mix(in srgb, var(--hr-color) 20%, transparent);
+  --button-border-color: #0F675B; /* var(--border-color);*/
+  --interactive-hover: #6C18D6;
+  --interactive-normal: color-mix(in srgb, var(--hr-color) 20%, transparent);
+
+  /*### Relative UI */
+
   --background-primary: #060507;
   --background-primary-alt: #2a2436; /* Internal menu sections */
- 
-  --background-tertiary: #ff0000;
-  --background-tertiary-alt: #999998;
   
-  /* Text Colors */
+  --background-tertiary: #ff0000;
+  
+  /*### Text Colors */
+
   --text-normal: #34e2e2; /* Cyan */
   --text-faint: #999998; /* Punctuation bullets, date separators, collapse arrows, Comments in code, includes in c language... */
   --text-muted: #999998; /* Code section language tag, ... */
@@ -66,10 +78,10 @@
   --text-on-accent: #ECEFF4;
   --text-accent: #6C18D6; /* ? */
   --text-error: #ff3b3b; /* Errors */
-  /* own */
   --text-soften: #ACEEEE;
   
-  /* Headings */
+  /*### Headings */
+
   --inline-title-color: #ff418e; /* Main Title */
   --h1-color: #FFE61C; /* Yellow */
   --h2-color: #fe8019; /* Orange */
@@ -78,10 +90,18 @@
   --h5-color: #999998; /* Grey */
   --h6-color: #34e2e2; /* Cyan */
   
-  /* Horizontal Separator Lines */
+  /*### Emphasis */
+
+  --bold-color: #6C18D6;
+  --bold-weight: 700;
+  --italic-color: #0F675B;
+  
+  /*### Horizontal Separator Lines and other backgrounds and lines */
+
   --hr-color: #999998;
   
-  /* Links */
+  /*### Links */
+
   --link-color: #3465A4; /* Internal links */
   --link-external-color: #3465A4; /* External links */
   --link-external-color-hover: #3465A4;
@@ -90,20 +110,18 @@
   --link-unresolved-color: #2a2436; /* For non-existent notes */
   --link-unresolved-opacity: 1;
   
-  /* Tags */
+  /*### Tags */
+
   --tag-capsule-color: var(--background-primary-alt);
   --tag-color: #A3FF8C; /* Small tag in the YAML at start */
   
-  /* Emphasis */
-  --bold-color: #6C18D6;
-  --bold-weight: 700;
-  --italic-color: #0F675B; /* ??? Italic is set in a special object later */
-  
-  /* Highlighting */
+  /*### Highlighting */
+
   --text-mark: transparent;
   --text-highlight-bg: rgba(163, 255, 140, 0.3); /* ? */
   
-  /* Code */
+  /*### Code */
+
   --pre-code: #2a2436; /* ? */
   --code-size: 13.125px;
   --code-background: var(--background-secondary); /* Background in code blocks */
@@ -111,33 +129,36 @@
   --code-tag: #999998; /* ? */
   --code-punctuation: var(--text-soften); /* Punctuation while they are being written in blockquote */
   
-  /* Interactive Elements */ /* Checkboxes */
-  --interactive-accent: #0000ff; /* #7fff00; /* Value if [x] */
+  /*### Interactive Elements */
+  /* Checkboxes */
+  --interactive-accent: #7fff00; /* Value if [x] */
   --interactive-accent-muted: rgba(254, 128, 25, 0.55);
   --interactive-accent-hover: #6C18D6;
   --interactive-before: #F1ADFF; /* ? */
-  --interactive-hover: #6C18D6;
-  --interactive-normal: #00ff00;/* #0F675B;*/
   
-  /* Borders */
-  --background-modifier-border: #E3E9AE; /* #34e2e2 */
-  --background-modifier-hover: #ff8800; /* added */
+  /*### Borders */
+
+  --background-modifier-border: #ff8800; /* #34e2e2 */
+  --background-modifier-hover: #6C18D6; /* added */
   --blockquote-border-color: #A3FF8C; /* Side line */
   --blockquote-border-thickness: 2px;
   --blockquote-color: #A3FF8C; /* Blockquote text color */
   
-  /* Fonts */
+  /*### Fonts */
+
   --font-text-theme: Avenir, Avenir Next, var(--default-font), sans-serif;
   --font-editor-theme: Avenir, Avenir Next, var(--default-font), sans-serif;
   --font-monospace-theme: "JetBrains Mono", Menlo, SFMono-Regular, Consolas,
     "Fira Code", "Roboto Mono", "Source Code Pro", monospace;
   
-  /* Scrollbar */
+  /*### Scrollbar */
+
   --scrollbar-bg: rgba(6, 5, 7, 0);
   --scrollbar-thumb-bg: #0F675B;
   --scrollbar-active-thumb-bg: #6C18D6;
   
-  /* Graph View */
+  /*### Graph View */
+
   --graph-text: var(--text-soften);
   --graph-node: #F1ADFF;
   --graph-node-unresolved: #fe8019;
@@ -146,23 +167,26 @@
   --graph-node-attachment: #6C18D6;
   --graph-node-tag: #ff418e;
   
-  /* Table */
+  /*### Table */
+
   --table-background: var(--background-secondary-alt);
   --table-header-weight: 800;
   
-  /* Ribbon */
+  /*### Ribbon */
+
   --ribbon-background: var(--background-secondary);
   --ribbon-background-collapsed: var(--background-secondary-alt);
 
-  /* Properties */
-  /* own */
+  /*### Properties */
+
   --properties-color: #E3E9AE;
   --properties-border: 1px solid var(--hr-color);
 }
 
-/*=========================*/
-/*= Graph View */
-/*=========================*/
+/*-----------------------------------------*/
+/*## Graph View */
+/*-----------------------------------------*/
+
 .theme-dark .graph-view.color-arrow {
   color: var(--graph-node);
 }
@@ -171,9 +195,9 @@
   color: var(--graph-node-focused);
 }
 
-/*=========================*/
-/*= HIGHLIGHTER */
-/*=========================*/
+/*-----------------------------------------*/
+/*## HIGHLIGHTER */
+/*-----------------------------------------*/
 mark {
   background-color: var(--text-mark) !important;
   padding: 0px;
@@ -233,7 +257,7 @@ mark {
 
 /* File View Icons - Options and Split Panel Buttons */
 .file-view-actions a {
-  color: var(--button-color);
+  color: var(--button-background-color);
 }
 
 .file-view-actions a:hover {
@@ -241,20 +265,20 @@ mark {
 }
 
 .clickable-icon.view-action {
-  color: var(--button-color);
+  color: var(--button-background-color);
   background-color: transparent;
 }
 
-/*=========================*/
-/*= Dropdown Menu */
-/*=========================*/
+/*-----------------------------------------*/
+/*## Dropdown Menu */
+/*-----------------------------------------*/
 .menu {
   background-color: var(--background-primary);
   border: var(--window-border);
 }
 
 .menu-item {
-  color: var(--button-color);
+  color: var(--button-background-color);
 }
 
 .menu-item:hover {
@@ -264,253 +288,16 @@ mark {
 }
 
 .menu-separator {
-  background-color: #999998;
-}
-
-/*=========================*/
-/*= Inline Code */
-/*=========================*/
-code,
-.cm-inline-code {
-  background-color: var(--tag-capsule-color) !important;
-  color: var(--code-tag) !important;
-  bottom: 0px !important;
-}
-
-/* Rrr */
-.cm-s-obsidian span.cm-error {
-  color: var(--text-error);
-}
-
-/* Code Blocks - Lighter background */
-.markdown-preview-view pre {
-  background-color: var(--background-primary-alt);
-}
-
-.cm-s-obsidian pre.HyperMD-codeblock {
-  background-color: var(--background-primary-alt);
-  color: var(--text-soften);
-}
-
-.cm-active.HyperMD-quote.HyperMD-quote-1.cm-line {
-  background-color: var(--background-tertiary);
-}
-
-/* Tables */
-thead {
-  background-color: var(--background-secondary-alt);
-  border-bottom: 4px solid var(--background-modifier-border);
-}
-
-.table {
-  background-color: var(--background-secondary-alt);
-  border: var(--window-border);
-  padding: 4px;
-  line-height: normal;
-  display: block;
-  border-radius: 4px;
-}
-
-.table-wrapper {
-  color: var(--text-soften) !important;
-}
-
-/* Images */
-img {
-  display: block;
-}
-
-/* Checkboxes */
-.markdown-preview-view .task-list-item-checkbox {
-  -webkit-appearance: none;
-  appearance: none;
-  top: 1.8px !important;
-  box-sizing: border-box;
-  border: 1px solid #6C18D6;
-  position: relative;
-  width: 1em;
-  height: 1em;
-  margin: 0;
-  margin-right: 0.7em;
-}
-
-.markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: "✓";
-  position: absolute;
-  color: #7fff00;
-  font-size: 1em;
-  line-height: 1em;
-  width: 1em;
-  text-align: center;
-  text-shadow: 0 0 0.1em #7fff00;
-}
-
-.checkbox-container {
   background-color: var(--hr-color);
-  border-radius: 14px;
-  display: inline-block;
-  height: 22px;
-  position: relative;
-  top: 4px;
-  user-select: none;
-  width: 42px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  transition: background 0.15s ease-in-out;
 }
 
-.checkbox-container.is-enabled {
-  background-color: var(--text-normal);
-}
 
-/*=========================*/
-/*= File Explorer */
-/*=========================*/
-.nav-folder-title {
-  color: #ff418e;
-  background-color: var(--background-primary);
-  font-weight: 500;
-}
+/*-----------------------------------------*/
+/*## Notes */
+/*-----------------------------------------*/
 
-.nav-folder-title:hover {
-  color: var(--interactive-hover);
-  background-color: var(--background-tertiary-alt);
-}
+/*### Text */
 
-.nav-file-title {
-  color: #34e2e2;
-  background-color: var(--background-primary);
-}
-
-.nav-file-title:hover {
-  color: #34e2e2;
-  background-color: #2a2436;
-}
-
-.nav-folder-children {
-  background-color: var(--background-primary);
-}
-
-.tree-item-self.nav-folder-title.is-clickable.mod-collapsible {
-  background-color: var(--background-primary-alt);
-  border: 2px solid color-mix(in srgb, var(--background-primary) 50%, transparent);
-}
-
-.tree-item-self.nav-file-title.tappable.is-clickable {
-  background-color: var(--background-primary);
-  border: 0.5px solid color-mix(in srgb, var(--hr-color) 20%, transparent);
-}
-
-.nav-files-container.node-insert-event {
-  background-color: var(--background-primary-alt);
-}
-
-/* Search Results */
-.search-result-file-matches {
-  color: #999999;
-  background-color: var(--background-primary);
-}
-
-.search-result-file-match:hover {
-  color: #F1ADFF;
-  background-color: #2a2436;
-}
-
-.search-result-file-title {
-  color: #fe8019;
-  background-color: var(--background-primary);
-}
-
-.search-result-file-title:hover {
-  color: #F1ADFF;
-  background-color: #2a2436;
-}
-
-.search-result-file-matched-text {
-  color: #A3FF8C;
-  background-color: var(--background-primary);
-}
-
-.search-result-container {
-  color: #999999;
-  background-color: var(--background-primary);
-}
-
-/* Vault Action Buttons - New note, new folder, settings gear, help */
-.nav-action-button {
-  color: var(--button-color);
-}
-
-.nav-action-button:hover {
-  color: var(--interactive-hover);
-}
-
-/* Settings + Help buttons */
-.workspace-drawer-vault-actions .clickable-icon {
-  color: var(--button-color);
-  background-color: transparent;
-}
-
-.workspace-drawer-vault-actions .clickable-icon:hover {
-  color: var(--interactive-hover);
-}
-
-.workspace-drawer-vault-actions .clickable-icon svg {
-  color: var(--button-color);
-  background-color: transparent;
-}
-
-.workspace-drawer-vault-actions .clickable-icon:hover svg {
-  color: var(--interactive-hover);
-}
-
-/* Sidebar toggle button */
-.sidebar-toggle-button .clickable-icon,
-.sidebar-toggle-button .clickable-icon svg {
-  color: var(--color-foreground);
-  background-color: var(--background-secondary);
-}
-
-.sidebar-toggle-button .clickable-icon:hover,
-.sidebar-toggle-button .clickable-icon:hover svg {
-  color: var(--interactive-hover);
-}
-
-/* Ribbon - Pink icons for plugin tabs */
-.side-dock-ribbon-action {
-  color: #ff418e;
-}
-
-.side-dock-ribbon-action:hover {
-  color: #6C18D6;
-}
-
-.side-dock-ribbon-tab {
-  color: #ff418e;
-}
-
-.side-dock-ribbon-tab:hover {
-  color: #6C18D6;
-}
-
-.side-dock-ribbon-tab.is-active {
-  color: #34e2e2;
-}
-
-.side-dock-ribbon-tab.is-active:hover {
-  color: #6C18D6;
-  background-color: #2a2436;
-}
-
-.side-dock-plugin-panel-inner {
-  background-color: var(--background-primary);
-}
-
-.side-dock-title {
-  font-size: 20px !important;
-  font-weight: 800 !important;
-}
-
-/* Editor */
 .cm-s-obsidian {
   font-family: var(--font-family-editor);
   font-size: 15px;
@@ -524,7 +311,8 @@ img {
   padding-right: 4% !important;
 }
 
-/* Editor Headings Punctuation */
+/*### Headings */
+
 .cm-header-1 {
   font-family: var(--font-family-editor);
   font-weight: 700;
@@ -567,43 +355,8 @@ img {
   color: var(--h6-color);
 }
 
-.cm-strong {
-  color: #6C18D6;
-  font-weight: 700;
-}
+/*### Properties / YAML */
 
-/*=========================*/
-/*= Italic */
-/*=========================*/
-.cm-em {
-  color: var(--italic-color);
-}
-
-/*=========================*/
-/*= Main screen */
-/*=========================*/
-
-.empty-state-action.tappable {
-  color: var(--button-color);
-}
-
-.empty-state-action.tappable:hover {
-  color: var(--interactive-hover);
-}
-
-/*=========================*/
-/*= Hashtags - Same as inline code */
-/*=========================*/
-.cm-s-obsidian span.cm-hashtag {
-  background-color: var(--tag-capsule-color);
-  color: #A3FF8C;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-/*=========================*/
-/*= Properties YAML */
-/*=========================*/
 .metadata-properties-heading {
   display: inline-flex;
   width: 100%;
@@ -685,7 +438,17 @@ a.tag {
   font-weight: 700;
 }
 
-/* Code Blocks */
+/*### Hashtags - Same as inline code */
+
+.cm-s-obsidian span.cm-hashtag {
+  background-color: var(--tag-capsule-color);
+  color: #A3FF8C;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/*### Code Blocks */
+
 .CodeMirror-code span.cm-inline-code {
   color: var(--code-tag);
 }
@@ -698,7 +461,8 @@ a.tag {
   background-color: var(--background-primary-alt);
 }
 
-/* Embeds */
+/*### Embeds */
+
 .markdown-embed-link {
   color: #A3FF8C !important;
   right: 2px !important;
@@ -706,6 +470,285 @@ a.tag {
 
 .markdown-embed-link:hover {
   color: #7fff00 !important;
+}
+
+/*### Bold */
+
+.cm-strong {
+  color: var(--bold-color);
+  font-weight: 700;
+}
+
+/*### Italic */
+
+.cm-em {
+  color: var(--italic-color);
+}
+
+/*### Inline Code */
+
+code,
+.cm-inline-code {
+  background-color: var(--tag-capsule-color) !important;
+  color: var(--code-tag) !important; /* important absolutely needed */
+  bottom: 0px !important;
+}
+
+/*### Rrr */
+
+.cm-s-obsidian span.cm-error {
+  color: var(--text-error);
+}
+
+/*### Code Blocks - Lighter background */
+
+.markdown-preview-view pre {
+  background-color: var(--background-primary-alt);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+  background-color: var(--background-primary-alt);
+  color: var(--text-soften);
+}
+
+/*### Tables */
+
+.cm-active.HyperMD-quote.HyperMD-quote-1.cm-line {
+  background-color: #ff0000;
+}
+
+thead {
+  background-color: var(--background-secondary-alt);
+  border-bottom: 4px solid var(--background-modifier-border);
+}
+
+.table {
+  background-color: var(--background-secondary-alt);
+  border: var(--window-border);
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-radius: 4px;
+}
+
+.table-wrapper {
+  color: var(--text-soften) !important;
+}
+
+/*### Images */
+
+img {
+  display: block;
+}
+
+/*### Checkboxes */
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  top: 1.8px !important;
+  box-sizing: border-box;
+  border: 1px solid #6C18D6;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  margin-right: 0.7em;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: "✓";
+  position: absolute;
+  color: #7fff00;
+  font-size: 1em;
+  line-height: 1em;
+  width: 1em;
+  text-align: center;
+  text-shadow: 0 0 0.1em #7fff00;
+}
+
+.checkbox-container {
+  background-color: var(--hr-color);
+  border-radius: 14px;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  top: 4px;
+  user-select: none;
+  width: 42px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  transition: background 0.15s ease-in-out;
+}
+
+.checkbox-container.is-enabled {
+  background-color: var(--text-normal);
+}
+
+/*### Emoji Fix */
+
+img.emoji {
+  display: inline-block;
+}
+
+/*### Callouts */
+
+body:not(.pt-disable-callout-styling) {
+  --callout-padding: 4px;
+  --callout-radius: var(--radius-m);
+  --callout-background-alpha: 20%;
+}
+
+body:not(.pt-disable-callout-styling) .callout {
+  background-color: unset;
+}
+
+body:not(.pt-disable-callout-styling) .callout .callout-title {
+  position: relative;
+  z-index: 5;
+  gap: unset;
+  align-items: center;
+  min-height: 36px;
+  border: 2px solid;
+  border-radius: var(--radius-m);
+}
+
+body:not(.pt-disable-callout-styling) .callout .callout-content {
+  padding: var(--size-4-5) var(--size-4-3) var(--size-4-1) var(--size-4-3);
+  margin-top: -16px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-bottom-right-radius: var(--radius-m);
+  border-bottom-left-radius: var(--radius-m);
+}
+
+/*### Callout Block */
+
+div.callout-title {
+  background-color: var(--h3-color);
+  border: var(--window-border);
+  color: #34e2e2;
+}
+
+svg.svg-icon.lucide-pencil {
+  color: #34e2e2;
+}
+
+/*### List Bullets */
+
+ul ul::before {
+  content: "";
+  border-left: 0px solid var(--window-border-color);
+  position: absolute;
+}
+
+ul ul::before {
+  left: -1em;
+  top: 0;
+  bottom: 0;
+}
+
+li::marker {
+  color: var(--h2-color);
+}
+
+/*-----------------------------------------*/
+/*## File Explorer */
+/*-----------------------------------------*/
+
+/*### Vault Action Buttons - New note, new folder, settings gear, help */
+
+.nav-action-button {
+  color: var(--button-background-color);
+}
+
+.nav-action-button:hover {
+  color: var(--interactive-hover);
+}
+
+/*### Other */
+
+.nav-folder-title {
+  color: #ff418e;
+  background-color: var(--background-primary);
+  font-weight: 500;
+}
+
+.nav-folder-title:hover {
+  color: var(--interactive-hover);
+  background-color: var(--hr-color);
+}
+
+.nav-file-title {
+  color: #34e2e2;
+  background-color: var(--background-primary);
+}
+
+.nav-file-title:hover {
+  color: #34e2e2;
+  background-color: #2a2436;
+}
+
+.nav-folder-children {
+  background-color: var(--background-primary);
+}
+
+.tree-item-self.nav-folder-title.is-clickable.mod-collapsible {
+  background-color: var(--background-primary-alt);
+  border: 2px solid color-mix(in srgb, var(--background-primary) 50%, transparent);
+}
+
+.tree-item-self.nav-file-title.tappable.is-clickable {
+  background-color: var(--background-primary);
+  border: 0.5px solid color-mix(in srgb, var(--hr-color) 20%, transparent);
+}
+
+.nav-files-container.node-insert-event {
+  background-color: var(--background-primary-alt);
+}
+
+/*### Search Results */
+
+.search-result-file-matches {
+  color: #999999;
+  background-color: var(--background-primary);
+}
+
+.search-result-file-match:hover {
+  color: #F1ADFF;
+  background-color: #2a2436;
+}
+
+.search-result-file-title {
+  color: #fe8019;
+  background-color: var(--background-primary);
+}
+
+.search-result-file-title:hover {
+  color: #F1ADFF;
+  background-color: #2a2436;
+}
+
+.search-result-file-matched-text {
+  color: #A3FF8C;
+  background-color: var(--background-primary);
+}
+
+.search-result-container {
+  color: #999999;
+  background-color: var(--background-primary);
+}
+
+/*-----------------------------------------*/
+/*## Main screen */
+/*-----------------------------------------*/
+
+.empty-state-action.tappable {
+  color: var(--button-background-color);
+}
+
+.empty-state-action.tappable:hover {
+  color: var(--interactive-hover);
 }
 
 /* Notice */
@@ -752,23 +795,6 @@ a.tag {
 .internal-embed .markdown-embed:hover {
   box-shadow: 0 14px 28px rgba(52, 226, 226, 0.25), 0 10px 10px rgba(52, 226, 226, 0.22);
   transform: translate3d(0px, -3px, 0px);
-}
-
-/* List Bullets */
-ul ul::before {
-  content: "";
-  border-left: 0px solid var(--window-border-color);
-  position: absolute;
-}
-
-ul ul::before {
-  left: -1em;
-  top: 0;
-  bottom: 0;
-}
-
-li::marker {
-  color: var(--h2-color);
 }
 
 /* Vertical Lines */
@@ -829,49 +855,8 @@ li::marker {
   border: var(--window-border);
 }
 
-/* Callouts */
-body:not(.pt-disable-callout-styling) {
-  --callout-padding: 4px;
-  --callout-radius: var(--radius-m);
-  --callout-background-alpha: 20%;
-}
+/*# Tags in frontmatter */
 
-body:not(.pt-disable-callout-styling) .callout {
-  background-color: unset;
-}
-
-body:not(.pt-disable-callout-styling) .callout .callout-title {
-  position: relative;
-  z-index: 5;
-  gap: unset;
-  align-items: center;
-  min-height: 36px;
-  border: 2px solid;
-  border-radius: var(--radius-m);
-}
-
-body:not(.pt-disable-callout-styling) .callout .callout-content {
-  padding: var(--size-4-5) var(--size-4-3) var(--size-4-1) var(--size-4-3);
-  margin-top: -16px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  border-bottom-right-radius: var(--radius-m);
-  border-bottom-left-radius: var(--radius-m);
-}
-
-/* Callout Block */
-div.callout-title {
-  background-color: var(--h3-color);
-  border: var(--window-border);
-  color: #34e2e2;
-}
-
-svg.svg-icon.lucide-pencil {
-  color: #34e2e2;
-}
-
-/* Tags in frontmatter */
 .frontmatter-container .tag,
 .frontmatter-container .frontmatter-alias {
   text-decoration: none;
@@ -886,90 +871,55 @@ svg.svg-icon.lucide-pencil {
   white-space: nowrap;
 }
 
-/* Emoji Fix */
-img.emoji {
-  display: inline-block;
-}
-
 /* Active Buttons */
 .nav-action-button.is-active {
   background-color: transparent;
   color: var(--text-on-accent);
 }
 
-/*=========================*/
-/*= Links */
-/*=========================*/
+/*-----------------------------------------*/
+/*## Links */
+/*-----------------------------------------*/
+
 .markdown-source-view.mod-cm6 .cm-underline {
-    color: var(--link-color);
-    text-decoration-line: var(--link-external-decoration);
-    text-decoration-thickness: var(--link-decoration-thickness);
-    text-decoration-style: var(--link-unresolved-decoration-style);
-    text-decoration-color: currentColor;
+  color: var(--link-color);
+  text-decoration-line: var(--link-external-decoration);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-decoration-style: var(--link-unresolved-decoration-style);
+  text-decoration-color: currentColor;
 }
 
 .markdown-source-view.mod-cm6 .cm-link .cm-underline,
 .markdown-source-view.mod-cm6 .cm-url .cm-underline {
-    color: var(--link-external-color);
-    text-decoration-line: var(--link-external-decoration);
-    text-decoration-thickness: var(--link-decoration-thickness);
-    text-decoration-style: var(--link-decoration-style);
-    text-decoration-color: currentColor;
+  color: var(--link-external-color);
+  text-decoration-line: var(--link-external-decoration);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: currentColor;
 }
 
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
-    color: var(--link-unresolved-color);
-    text-decoration-line: var(--link-decoration);
-    text-decoration-thickness: var(--link-decoration-thickness);
-    text-decoration-style: var(--link-unresolved-decoration-style);
-    text-decoration-color: currentColor;
+  color: var(--link-unresolved-color);
+  text-decoration-line: var(--link-decoration);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-decoration-style: var(--link-unresolved-decoration-style);
+  text-decoration-color: currentColor;
 }
 
 .markdown-source-view.mod-cm6 .cm-underline:hover,
 .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
 .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover,
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline:hover {
-    color: var(--interactive-hover) !important;
-    text-decoration-line: none !important;
-    text-decoration-style: none !important;
-    text-decoration-color: transparent !important; /* Forces underline to disappear */
+  color: var(--interactive-hover) !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important; /* Forces underline to disappear */
 }
 
-/*=========================*/
-/*= Boutons du menu */
-/*=========================*/
+/*-----------------------------------------*/
+/*## Code sections */
+/*-----------------------------------------*/
 
-.modal-close-button.mod-raised.clickable-icon {
-    color: var(--button-foreground);
-    background-color: var(--button-color);
-}
-
-.modal-close-button.mod-raised.clickable-icon:hover {
-    background-color: var(--interactive-hover);
-}
-
-.dropdown {
-    color: var(--button-foreground);
-    background-color: var(--interactive-normal);
-}
-
-div.setting-item-control.button {
-  background-color: var(--button-color);
-  color: var(--button-foreground);
-}
-
-button.mod-cta {
-  background-color: var(--button-color);
-  color: var(--button-foreground);
-}
-
-button.mod-cta:hover {
-  background-color: var(--interactive-hover);
-}
-
-/*=========================*/
-/*= Code sections */
-/*=========================*/
 .cm-hmd-codeblock.cm-type {
   color: var(--color-ansiCyan);
   font-weight: 600;
@@ -1018,27 +968,146 @@ span.cm-hmd-codeblock {
   color: var(--color-ansiGreen);
 }
 
-/*=========================*/
-/*= DIAGNOSTIC ROUND 3 - REMOVE AFTER TESTING                  */
-/*= Block 6 (html body button) confirmed working - keep it     */
-/*= for true <button> elements but scope it later.             */
-/*= This round targets non-<button> cyan survivors with        */
-/*= distinct colors so we can map each to a class.             */
-/*=========================*/
+/*-----------------------------------------*/
+/*## Boutons */
+/*-----------------------------------------*/
+
+/*### Settings + Help buttons */
+
+.workspace-drawer-vault-actions .clickable-icon {
+  color: var(--button-background-color);
+  background-color: transparent;
+}
+
+.workspace-drawer-vault-actions .clickable-icon:hover {
+  color: var(--interactive-hover);
+}
+
+.workspace-drawer-vault-actions .clickable-icon svg {
+  color: var(--button-background-color);
+  background-color: transparent;
+}
+
+.workspace-drawer-vault-actions .clickable-icon:hover svg {
+  color: var(--interactive-hover);
+}
+
+/*### Sidebar toggle button */
+
+.sidebar-toggle-button .clickable-icon,
+.sidebar-toggle-button .clickable-icon svg {
+  color: var(--color-foreground);
+  background-color: var(--background-secondary);
+}
+
+.sidebar-toggle-button .clickable-icon:hover,
+.sidebar-toggle-button .clickable-icon:hover svg {
+  color: var(--interactive-hover);
+}
+
+/*### Ribbon - Pink icons for plugin tabs */
+
+.side-dock-ribbon-action {
+  color: #ff418e;
+}
+
+.side-dock-ribbon-action:hover {
+  color: var(--button-foreground-3);
+}
+
+.side-dock-ribbon-tab {
+  color: #ff418e;
+}
+
+.side-dock-ribbon-tab:hover {
+  color: #6C18D6;
+}
+
+.side-dock-ribbon-tab.is-active {
+  color: #34e2e2;
+}
+
+.side-dock-ribbon-tab.is-active:hover {
+  color: #6C18D6;
+  background-color: #2a2436;
+}
+
+.side-dock-plugin-panel-inner {
+  background-color: var(--background-primary);
+}
+
+.side-dock-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+
+/*### Menu Buttons */
+
+.modal-close-button.mod-raised.clickable-icon {
+  color: var(--button-foreground-1);
+  background-color: var(--button-background-color);
+}
+
+.modal-close-button.mod-raised.clickable-icon:hover {
+  background-color: var(--interactive-hover);
+}
+
+.dropdown {
+  color: var(--button-foreground-1);
+  background-color: var(--interactive-normal);
+}
+
+div.setting-item-control.button {
+  background-color: var(--button-background-color);
+  color: var(--button-foreground-1);
+}
+
+button.mod-cta {
+  background-color: var(--button-background-color);
+  color: var(--button-foreground-1);
+}
+
+button.mod-cta:hover {
+  background-color: var(--interactive-hover);
+}
+
+/*### Toggles */
+
+.checkbox-container {
+    background-color: var(--button-background-color);
+}
+.checkbox-container.is-enabled {
+    background-color: var(--button-foreground-1);
+}
+
+/*-----------------------------------------*/
+/*## Mobile Buttons and borders corrections */
+/*-----------------------------------------*/
+
 html body button,
 html body button:active,
 html body button:focus {
-  background-color: var(--button-color-alt) !important;
-  color: #ffffff !important;
+  color: var(--button-foreground-2) !important;
+  background-color: var(--button-background-color-alt) !important;
+  /*border: 1px solid var(--button-border-color);*/
 }
+
+html body button:hover {
+  color: var(--button-foreground-2);
+  background-color: var(--interactive-hover) !important;
+  /*border: 1px solid var(--button-border-color);*/
+}
+
+/*### Correcting borders */
 
 .setting-group .setting-item {
     border-top: var(--border-width) solid var(--border-color);
 }
 
 .modal.mod-settings .vertical-tab-header {
-    border-inline-end: var(--border-width) solid var(--divider-color);
+    border-inline-end: var(--border-width) solid var(--button-background-color-alt);
 }
+
 body {
   --status-bar-border-color: var(--border-color);
   --tab-outline-color: var(--border-color);
@@ -1062,6 +1131,12 @@ body {
   --titlebar-border-color: var(--background-modifier-border);
 */
 }
+
 thead {
-    border-bottom: 4px solid var(--border-color);
+  border-bottom: 4px solid var(--border-color);
 }
+/*
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.has-active-menu, .mod-right-split .workspace-tab-header-container .workspace-tab-header.has-active-menu, .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active, .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+  color: var(--h2-color) !important;
+  background-color: var(--window-border-color);
+}*/
