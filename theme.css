@@ -6,7 +6,7 @@
 /* Creation: 2026-01-15 */
 /* Update: 2026-06-13 */
 /* Contributors: [神縁] */
-/* Version: !!str 1.5.6 */
+/* Version: !!str 1.5.7 */
 /*---*/
 
 /*-----------------------------------------*/
@@ -278,11 +278,11 @@ mark {
 }
 
 .menu-item {
-  color: var(--button-background-color);
+  color: var(--button-foreground-1);
 }
 
 .menu-item:hover {
-  color: var(--interactive-hover);
+  color: var(--button-foreground-3);
   background-color: #2a2436;
   /*border: 1px solid #6C18D6; */
 }
@@ -290,7 +290,6 @@ mark {
 .menu-separator {
   background-color: var(--hr-color);
 }
-
 
 /*-----------------------------------------*/
 /*## Notes */
@@ -535,6 +534,10 @@ thead {
   color: var(--text-soften) !important;
 }
 
+thead {
+  border-bottom: 4px solid var(--window-border);
+}
+
 /*### Images */
 
 img {
@@ -663,7 +666,7 @@ li::marker {
 }
 
 .nav-action-button:hover {
-  color: var(--interactive-hover);
+  color: var(--button-foreground-2);
 }
 
 /*### Other */
@@ -680,13 +683,13 @@ li::marker {
 }
 
 .nav-file-title {
-  color: #34e2e2;
+  color: var(--text-normal);
   background-color: var(--background-primary);
 }
 
 .nav-file-title:hover {
-  color: #34e2e2;
-  background-color: #2a2436;
+  color: var(--text-normal);
+  /*background-color: #2a2436;*/
 }
 
 .nav-folder-children {
@@ -855,6 +858,10 @@ li::marker {
   border: var(--window-border);
 }
 
+.workspace-tab-header-inner-title {
+  color: #ACEEEE;
+}
+
 /*# Tags in frontmatter */
 
 .frontmatter-container .tag,
@@ -983,13 +990,13 @@ span.cm-hmd-codeblock {
   color: var(--interactive-hover);
 }
 
-.workspace-drawer-vault-actions .clickable-icon svg {
-  color: var(--button-background-color);
-  background-color: transparent;
-}
-
 .workspace-drawer-vault-actions .clickable-icon:hover svg {
   color: var(--interactive-hover);
+}
+
+.workspace-drawer-vault-actions .clickable-icon svg {
+    color: var(--button-foreground-3);
+    background-color: transparent;
 }
 
 /*### Sidebar toggle button */
@@ -1039,6 +1046,15 @@ span.cm-hmd-codeblock {
 .side-dock-title {
   font-size: 20px !important;
   font-weight: 800 !important;
+}
+
+.clickable-icon
+{
+  color: var(--button-foreground-1);
+}
+
+.clickable-icon.side-dock-ribbon-action {
+  color: #ff418e;
 }
 
 /*### Menu Buttons */
@@ -1132,9 +1148,6 @@ body {
 */
 }
 
-thead {
-  border-bottom: 4px solid var(--border-color);
-}
 /*
 .mod-left-split .workspace-tab-header-container .workspace-tab-header.has-active-menu, .mod-right-split .workspace-tab-header-container .workspace-tab-header.has-active-menu, .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active, .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
   color: var(--h2-color) !important;
