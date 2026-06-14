@@ -5,7 +5,7 @@ Tags: !!str "#documentation #theme"
 Creation: 2026-01-15
 Update: 2026-06-11
 Contributors: [神縁]
-Version: !!str 1.5.8
+Version: !!str 1.5.9
 ---
 
 # Tokyo Terminal
@@ -97,6 +97,10 @@ For developers/writers nostalgic of the future. For those who code like the futu
 - [ ] Port to Chrome
 - [x] Fixed code sections color to match usual tokyo-terminal conventions
 - [x] Correction of button transparency as --color-foreground impacting the color for the blue buttons
+- [ ] I cannot catch back the Table title head bottom border anymore, neither change the background to purple in second choice. thead and tr should be the right objects but to no avail.
+- [ ] Main screen triple options (Create new note, Find note, Close) is oprange on desktop but gray on mobile. Hopefully corrected already in 1.5.9.
+- [ ] I do not know how to use the user accentuation color choice. I could see all the orange occurences changed to the variable if possible. I find it a PITA to choose the right color anyway.
+- [ ] Last but not least the menu that opens above the notes list does not have a background set on menu items, meaning that the underlaying notes titles make a lot of mess when reading the different menu options. I still don't know how to catch these as it is on mobile and I cannot emulate the env or use dev mode.
 - [ ] Internal link hovering should be purple or blue and without underline. Both types hover in cyan for now and I could not figure out how to overcome that behavior
 <br><br>
 
