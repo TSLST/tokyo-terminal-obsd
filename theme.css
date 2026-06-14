@@ -6,7 +6,7 @@
 /* Creation: 2026-01-15 */
 /* Update: 2026-06-13 */
 /* Contributors: [神縁] */
-/* Version: !!str 1.5.7 */
+/* Version: !!str 1.5.8 */
 /*---*/
 
 /*-----------------------------------------*/
@@ -53,24 +53,23 @@
 
   /*### Mobile UI Buttons */
 
-  --button-foreground-1: #fe8019;
+  --button-foreground-1: #fe8019; /* Ideally let it down to user accentuation color pref and all oranges occurences */
   --button-foreground-2: #FFE61C;
   --button-foreground-3: #34e2e2;
-  --button-background-color: color-mix(in srgb, var(--hr-color) 20%, transparent);
-  --button-background-color-alt: color-mix(in srgb, var(--hr-color) 20%, transparent);
+  --button-background-color: color-mix(in srgb, var(--hr-color) 30%, transparent);
+  --button-background-color-alt: color-mix(in srgb, var(--hr-color) 30%, transparent);
   --button-border-color: #0F675B; /* var(--border-color);*/
   --interactive-hover: #6C18D6;
-  --interactive-normal: color-mix(in srgb, var(--hr-color) 20%, transparent);
+  --interactive-normal: color-mix(in srgb, var(--hr-color) 30%, transparent);
 
   /*### Relative UI */
 
   --background-primary: #060507;
   --background-primary-alt: #2a2436; /* Internal menu sections */
   
-  --background-tertiary: #ff0000;
-  
   /*### Text Colors */
 
+  --caret-color: #ACEEEE;
   --text-normal: #34e2e2; /* Cyan */
   --text-faint: #999998; /* Punctuation bullets, date separators, collapse arrows, Comments in code, includes in c language... */
   --text-muted: #999998; /* Code section language tag, ... */
@@ -84,7 +83,7 @@
 
   --inline-title-color: #ff418e; /* Main Title */
   --h1-color: #FFE61C; /* Yellow */
-  --h2-color: #fe8019; /* Orange */
+  --h2-color: #fe8019; /* User accentuation color pref should be picked here */
   --h3-color: #6C18D6; /* Purple */
   --h4-color: #0F675B; /* Dark Cyan */
   --h5-color: #999998; /* Grey */
@@ -107,8 +106,8 @@
   --link-external-color-hover: #3465A4;
   --link-external-decoration: underline;
   --link-external-decoration-hover: bold;
-  --link-unresolved-color: #2a2436; /* For non-existent notes */
-  --link-unresolved-opacity: 1;
+  --link-unresolved-color: #d66666; /* For non-existent notes */
+  --link-unresolved-opacity: 0.6;
   
   /*### Tags */
 
@@ -329,28 +328,28 @@ mark {
 .cm-header-3 {
   font-family: var(--font-family-editor);
   font-weight: 700;
-  font-size: 23px;
+  font-size: 24px;
   color: var(--h3-color);
 }
 
 .cm-header-4 {
   font-family: var(--font-family-editor);
   font-weight: 700;
-  font-size: 19px;
+  font-size: 22px;
   color: var(--h4-color);
 }
 
 .cm-header-5 {
   font-family: var(--font-family-editor);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--h5-color);
 }
 
 .cm-header-6 {
   font-family: var(--font-family-editor);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--h6-color);
 }
 
@@ -747,7 +746,7 @@ li::marker {
 /*-----------------------------------------*/
 
 .empty-state-action.tappable {
-  color: var(--button-background-color);
+  color: var(--button-foreground-1);
 }
 
 .empty-state-action.tappable:hover {
@@ -1130,7 +1129,9 @@ body {
   --divider-color: var(--border-color);
   --slider-track-background: var(--hr-color);
   --table-header-border-color: var(--border-color);
-  --table-border-color: var(--border-color);--table-add-button-border-color: var(--border-color);
+  --table-border-color: var(--border-color);
+  --table-add-button-border-color: var(--border-color);
+  caret-color: var(--caret-color);
 /*
   border-top: 1px solid var(--border-color);
   border-bottom: 4px solid var(--border-color);
