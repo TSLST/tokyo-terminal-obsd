@@ -88,8 +88,8 @@ For developers/writers nostalgic of the future. For those who code like the futu
 ## ToDo
 -----------------------------------------
 
-- [x] Publishing Obsidian version
-- [x] Publishing VS Codium version on the marketplace
+- [x] Published Obsidian version
+- [x] Publishied VS Codium version on the marketplace
 - [ ] Publishing VS Code version on the marketplace
 - [ ] Find KaTeX devs and ask them to add an align tag resetter
 - [ ] Publish Licence to SPDX
