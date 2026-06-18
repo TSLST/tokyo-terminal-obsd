@@ -3,7 +3,7 @@ Type: Doc
 Use: Readme docs for Tokyo Terminal them, Obsidian version.
 Tags: !!str "#documentation #theme"
 Creation: 2026-01-15
-Update: 2026-06-11
+Update: 2026-06-15
 Contributors: [神縁]
 Version: !!str 1.5.9
 ---
@@ -98,10 +98,16 @@ For developers/writers nostalgic of the future. For those who code like the futu
 - [x] Fixed code sections color to match usual tokyo-terminal conventions
 - [x] Correction of button transparency as --color-foreground impacting the color for the blue buttons
 - [ ] I cannot catch back the Table title head bottom border anymore, neither change the background to purple in second choice. thead and tr should be the right objects but to no avail.
-- [ ] Main screen triple options (Create new note, Find note, Close) is oprange on desktop but gray on mobile. Hopefully corrected already in 1.5.9.
-- [ ] I do not know how to use the user accentuation color choice. I could see all the orange occurences changed to the variable if possible. I find it a PITA to choose the right color anyway.
-- [ ] Last but not least the menu that opens above the notes list does not have a background set on menu items, meaning that the underlaying notes titles make a lot of mess when reading the different menu options. I still don't know how to catch these as it is on mobile and I cannot emulate the env or use dev mode.
+- [x] Main screen triple options is gray instead of orange on mobile
+- [ ] I wanted the note edit toolbar with different markup tags automatic injection to be made of orange colored buttons but I cannot find the variables.
+- [x] Accentuation color choice through --color-accent usages. Mostly in purple but not hover colors.
+- [x] Menu that opens above the notes list does not have a background set on menu items
 - [ ] Internal link hovering should be purple or blue and without underline. Both types hover in cyan for now and I could not figure out how to overcome that behavior
+- [x] #6c18d6 → #8b5cf6 to increase readability and align with Obsidian standard color.
+- [x] #ff418e → #fc5698
+- [x] #181efd → #0285f9 Not too close to links color but with better readability than current color.
+- [x] #0f675b → #137d6e → #116d61
+- [x] this.app.emulateMobile(true);
 <br><br>
 
 > Do not hesitate to drop me a line on GitHub if you spot an issue, see more tweaks and like the color scheme.
