@@ -5,7 +5,7 @@ Tags: !!str "#documentation #theme"
 Creation: 2026-01-15
 Update: 2026-06-15
 Contributors: [神縁]
-Version: !!str 1.5.10
+Version: !!str 1.5.11
 ---
 
 # Tokyo Terminal
