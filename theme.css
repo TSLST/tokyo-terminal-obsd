@@ -1,13 +1,12 @@
-
-/*---*/
-/* Type: Theme */
-/* Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic. */
-/* Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd" */
-/* Creation: 2026-01-15 */
-/* Update: 2026-06-15 */
-/* Contributors: [神縁] */
-/* Version: !!str 1.5.11 */
-/*---*/
+/* ---
+ * Type: Theme
+ * Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic.
+ * Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd"
+ * Creation: 2026-01-15
+ * Update: 2026-09-10
+ * Contributors: [神縁]
+ * Version: !!str 1.5.12
+ * --- */
 
 /*---------------------*/
 /*## Variables */
@@ -1132,6 +1131,10 @@ span.cm-hmd-codeblock {
 
 .cm-s-obsidian span.cm-quote {
     color: var(--color-Pink);
+}
+
+.cm-s-obsidian span.cm-quote.cm-quote-1.cm-strong {
+    color: var(--bold-color);
 }
 
 span.cm-hmd-codeblock {
