@@ -9,6 +9,7 @@ Version: !!str 1.5.12
 ---
 
 # Tokyo Terminal
+================================================================================
 
 ```shin'en
    /$$            /$$            /$$     /$$$$$$$$$$      
@@ -24,9 +25,9 @@ Version: !!str 1.5.12
    |__/          |__/        |_/  |_/   \/|$$$$/   \$$$   
 ```
 
------------------------------------------
+-------------------------
 ## Description
------------------------------------------
+-------------------------
 
 ---
 ### Short Description (for marketplace/extension metadata)
@@ -58,9 +59,9 @@ Aiming for a holistic environment theme, *tokyo-terminal* delivers:
 
 For developers/writers nostalgic of the future. For those who conceptualize like the future depends on it (Because it does).
 
------------------------------------------
+-------------------------
 ## Palette
------------------------------------------
+-------------------------
 
 | Color           | Hex       | Usage                                                                       |
 |---              |---        |---                                                                          |
@@ -84,9 +85,9 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 | +Pink           | `#F1ADFF` | Decimal numbers in code, unresolved boolean, `this` keyword when in italic                 |
 | +Gold           | `#E3E9AE` | Property keys in yaml & json files, arguments                               |
 
------------------------------------------
+-------------------------
 ## ToDo
------------------------------------------
+-------------------------
 
 - [x] Published Obsidian version
 - [x] Publishied VS Codium version on the marketplace
@@ -109,9 +110,9 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 
 > Do not hesitate to drop me a line on GitHub if you spot an issue, see more tweaks and like the color scheme.
 
------------------------------------------
+-------------------------
 ## Screenshots
------------------------------------------
+-------------------------
 
 ![Tokyo Terminal in Action](images/screenshot1.png)
 ![Color Palette](images/palette.png)
