@@ -3,9 +3,9 @@ Type: Doc
 Use: Readme docs for Tokyo Terminal them, Obsidian version.
 Tags: !!str "#documentation #theme"
 Creation: 2026-01-15
-Update: 2026-09-10
+Update: 2026-09-21
 Contributors: [神縁]
-Version: !!str 1.5.12
+Version: !!str 1.5.13
 ---
 
 # Tokyo Terminal
@@ -39,7 +39,7 @@ Tokyo Terminal is a neon, high-contrast Obsidian theme inspired by a retrofuturi
 ---
 ### Long README Introduction
 
-**Welcome to *tokyo-terminal***, an Obsidian theme that transports your editor to a neon-colored terminal circa 1984.
+**Welcome to *tokyo-terminal***, an Obsidian theme (Ported from VS Codium/Code) that transports your editor to a neon-colored terminal circa 1984.
 This isn’t just a color scheme; it’s a high-contrast, high-energy workspace for writers and storytellers who crave **clarity and visual accentuation**.
 
 Transform Obsidian into a neon-lit, retro-futurist terminal with high-contrast colors and synthwave accents inspired by Tokyo electric nights aesthetics.
@@ -82,7 +82,7 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 | BrightBlack     | `#999988` | Comments in some languages, punctuation, Header 5                           |
 | White           | `#ACEEEE` | Variables in code                                                           |
 | +oldRed         | `#d66666` | Metaprocessors and loaders                                                  |
-| +Pink           | `#F1ADFF` | Decimal numbers in code, unresolved boolean, `this` keyword when in italic                 |
+| +Pink           | `#F1ADFF` | Decimal numbers in code, unresolved boolean, `this` keyword when in italic  |
 | +Gold           | `#E3E9AE` | Property keys in yaml & json files, arguments                               |
 
 -------------------------
@@ -98,7 +98,7 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 - [ ] Port to Chrome
 - [x] Fixed code sections color to match usual tokyo-terminal conventions
 - [x] Correction of button transparency as --color-foreground impacting the color for the blue buttons
-- [ ] I cannot catch back the Table title head bottom border anymore, neither change the background to purple in second choice. thead and tr should be the right objects but to no avail.
+- [x] Catch back the Table title head bottom border, change the background to purple in all rows. thead and tr corrected.
 - [x] Main screen triple options is gray instead of orange on mobile
 - [ ] I wanted the note edit toolbar with different markup tags automatic injection to be made of orange colored buttons but I cannot find the variables.
 - [x] Accentuation color choice through --color-accent usages. Mostly in purple but not hover colors.
@@ -106,6 +106,9 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 - [ ] Internal link hovering should be purple or blue and without underline. Both types hover in cyan for now and I could not figure out how to overcome that behavior
 - [ ] Verify all languages in embedded code: renders and tokens
 - [x] Use `this.app.emulateMobile(true);` for a mobile devmode
+- [x] Accentuation color choice through --color-accent usages is bugged if it matches the cyan background of blockquotes titles. Resolved as long as accentuation does not match `#ACEEEE`!
+- [x] .cm-html-embed thead tr
+- [x] div.callout-title
 <br><br>
 
 > Do not hesitate to drop me a line on GitHub if you spot an issue, see more tweaks and like the color scheme.

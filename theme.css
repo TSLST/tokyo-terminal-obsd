@@ -3,9 +3,9 @@
  * Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic.
  * Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd"
  * Creation: 2026-01-15
- * Update: 2026-09-10
+ * Update: 2026-09-21
  * Contributors: [神縁]
- * Version: !!str 1.5.12
+ * Version: !!str 1.5.13
  * --- */
 
 /*---------------------*/
@@ -79,6 +79,7 @@
   --text-soften: #ACEEEE;
   --text-on-accent: #ECEFF4;
   --text-highlight: var(--color-Gold);
+  --code-string: var(--color-ansiBrightGreen);
   
   /*### Headings */
 
@@ -511,6 +512,11 @@ a.tag {
   background-color: var(--background-primary-alt);
 }
 
+/* Balises HTML in-code */
+.cm-hmd-codeblock.cm-tag {
+  color: var(--color-Pink);
+}
+
 /*### Embeds */
 
 .markdown-embed-link {
@@ -544,7 +550,6 @@ a.tag {
 /*### Highlight */
 
 /* I don't understand all these but there cool enough for now*/
-
 mark {
   background-color: var(--text-mark) !important;
   padding: 0px;
@@ -553,7 +558,7 @@ mark {
 /* Text pre-rendered */
 .cm-s-obsidian span.cm-highlight {
   color: var(--text-highlight);
-  font-weight: 500;
+  font-weight: 800;
   background-color: transparent;
   text-shadow: 0 0 0.6em #A3FF8C59;
   -webkit-background-clip: text;
@@ -622,12 +627,11 @@ code,
 
 /*### Tables */
 
-.cm-html-embed thead tr > th:nth-child(2n+2), 
-.markdown-rendered thead tr > th:nth-child(2n+2),
-.cm-html-embed thead tr > th:first-child, 
-.markdown-rendered thead tr > th:first-child {
+.cm-html-embed thead tr > th:nth-child(n), 
+.markdown-rendered thead tr > th:nth-child(n) {
     background-color: var(--bold-color) !important;
     border-bottom-width: 4px;
+    color: var(--text-on-accent);
 }
 
 .table {
@@ -640,6 +644,10 @@ code,
 }
 
 .table-wrapper {
+  color: var(--text-soften) !important;
+}
+
+.cm-line.HyperMD-table-2.HyperMD-table-row {
   color: var(--text-soften) !important;
 }
 
@@ -656,7 +664,7 @@ img {
   appearance: none;
   top: 1.8px !important;
   box-sizing: border-box;
-  border: 1px solid #8b5cf6;
+  border: 1px solid var(--hr-color);
   position: relative;
   width: 1em;
   height: 1em;
@@ -673,6 +681,10 @@ img {
   width: 1em;
   text-align: center;
   text-shadow: 0 0 0.1em var(--text-on-accent);
+}
+
+.cm-formatting.cm-formatting-task.cm-property {
+  color: var(--color-accent);
 }
 
 /*### Emoji Fix */
@@ -716,9 +728,9 @@ body:not(.pt-disable-callout-styling) .callout .callout-content {
 /*### Callout Block */
 
 div.callout-title {
-  background-color: var(--h3-color);
+  background-color: var(--color-accent);
   border: var(--window-border);
-  color: #34e2e2;
+  color: var(--text-on-accent);
 }
 
 svg.svg-icon.lucide-pencil {
@@ -1103,13 +1115,25 @@ span.cm-hmd-codeblock {
     color: var(--code-normal);
 }
 
+.token.attr-name, /* rendered */
 .cm-attribute.cm-hmd-codeblock {
-    color: var(--color-Gold);
+    color: var(--color-ansiBrightYellow);
+    font-weight: 600;
 }
 
 .cm-builtin.cm-hmd-codeblock,
 .cm-hmd-codeblock.cm-property {
     color: var(--color-ansiRed);
+}
+
+/* HTML In Markdown */
+.cm-attribute {
+    color: var(--color-ansiBrightYellow);
+    font-weight: 600;
+}
+
+.cm-qualifier, .cm-string, .cm-string-2 {
+    color: var(--code-string);
 }
 
 /* I usually use --color-ansiGreen but since there are so few keywrods, I'd rather go for something visually bland */
@@ -1133,8 +1157,19 @@ span.cm-hmd-codeblock {
     color: var(--color-Pink);
 }
 
+/* Callout box name (Not Rendered) */
+.cm-formatting.cm-formatting-quote.cm-formatting-quote-1.cm-hmd-callout {
+    color: var(--color-ansiBrightBlack);
+}
+
+/* Bold in-quote */
 .cm-s-obsidian span.cm-quote.cm-quote-1.cm-strong {
-    color: var(--bold-color);
+    color: var(--color-ansiRed);
+}
+
+/* Italic in-quote */
+.cm-s-obsidian span.cm-em.cm-quote.cm-quote-1 {
+    color: var(--color-ansiWhite);
 }
 
 span.cm-hmd-codeblock {
