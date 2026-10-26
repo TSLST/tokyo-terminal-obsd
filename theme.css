@@ -3,9 +3,9 @@
  * Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic.
  * Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd"
  * Creation: 2026-01-15
- * Update: 2026-09-21
+ * Update: 2026-10-26
  * Contributors: [神縁]
- * Version: !!str 1.5.13
+ * Version: !!str 1.5.14
  * --- */
 
 /*---------------------*/
@@ -114,7 +114,7 @@
   /*### Tags */
 
   --tag-capsule-color: var(--background-primary-alt);
-  --tag-color: #A3FF8C; /* Small tag in the YAML at start */
+  --tag-color: var(--color-ansiGreen); /* Small tag in the YAML at start */
   
   /*### Highlighting */
 
@@ -433,44 +433,9 @@ div.cm-gutterElement {
   color: var(--code-normal);
 }
 
-.multi-select-pill {
-  background-color: var(--tag-capsule-color);
-  color: #A3FF8C;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-.multi-select-pill:hover {
-  background-color: var(--tag-capsule-color);
-  color: #A3FF8C;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-.multi-select-pill-remove-button:hover {
-  background-color: var(--interactive-hover);
-  color: #A3FF8C;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-.multi-select-pill-content, .multi-select-pill-remove-button {
-  background-color: var(--tag-capsule-color);
-  color: #A3FF8C;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
 .tag {
   background-color: #2a2436;
   color: #999998;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-a.tag {
-  background-color: #2a2436;
-  color: #ACEEEE;
   padding: 2px 4px;
   border-radius: 3px;
 }
@@ -480,11 +445,44 @@ a.tag {
   font-weight: 700;
 }
 
+/*### Multi Select Tags in Meta */
+
+.multi-select-pill {
+  background-color: var(--tag-capsule-color);
+  color: var(--tag-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.multi-select-pill:hover {
+  background-color: var(--tag-capsule-color);
+  color: var(--tag-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.multi-select-pill-remove-button:hover {
+  background-color: var(--interactive-hover);
+  color: var(--tag-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.multi-select-pill-content, .multi-select-pill-remove-button {
+  background-color: var(--tag-capsule-color);
+  color: var(--tag-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
 /*### Hashtags - Same as inline code */
 
-.cm-s-obsidian span.cm-hashtag {
+a.tag,
+.cm-s-obsidian span.cm-hashtag,
+.cm-hashtag.cm-hashtag-end.cm-meta.cm-quote.cm-quote-2.cm-tag-P2,
+.cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-quote.cm-quote-2.cm-tag-P2 {
   background-color: var(--tag-capsule-color);
-  color: #A3FF8C;
+  color: var(--tag-color);
   padding: 2px 4px;
   border-radius: 3px;
 }

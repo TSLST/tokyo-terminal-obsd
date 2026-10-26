@@ -3,9 +3,9 @@ Type: Doc
 Use: Readme docs for Tokyo Terminal them, Obsidian version.
 Tags: !!str "#documentation #theme"
 Creation: 2026-01-15
-Update: 2026-09-21
+Update: 2026-10-26
 Contributors: [神縁]
-Version: !!str 1.5.13
+Version: !!str 1.5.14
 ---
 
 # Tokyo Terminal
