@@ -1,11 +1,14 @@
 /* ---
  * Type: Theme
  * Use: Tokyo Terminal Theme for Obsidian. Retro 80s terminal design - Vaporwave colored, high contrast and retrofuturistic.
- * Tags: !!str "#obsidian #tokyo-terminal #tokyo-terminal-obsd"
+ * Tags: !!str
+ *    - "#obsidian"
+ *    - "#tokyo-terminal"
+ *    - "#tokyo-terminal-obsd"
  * Creation: 2026-01-15
- * Update: 2026-10-26
+ * Update: 2026-10-30
  * Contributors: [神縁]
- * Version: !!str 1.5.14
+ * Version: !!str 1.5.15
  * --- */
 
 /*---------------------*/
@@ -433,44 +436,37 @@ div.cm-gutterElement {
   color: var(--code-normal);
 }
 
-.tag {
-  background-color: #2a2436;
-  color: #999998;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
 .cm-formatting-list {
   color: #F1ADFF;
   font-weight: 700;
 }
 
-/*### Multi Select Tags in Meta */
+/* Multi Select Tags in Meta */
 
 .multi-select-pill {
   background-color: var(--tag-capsule-color);
-  color: var(--tag-color);
+  color: var(--button-foreground-1);
   padding: 2px 4px;
   border-radius: 3px;
 }
 
 .multi-select-pill:hover {
   background-color: var(--tag-capsule-color);
-  color: var(--tag-color);
+  color: var(--button-foreground-1);
   padding: 2px 4px;
   border-radius: 3px;
 }
 
 .multi-select-pill-remove-button:hover {
   background-color: var(--interactive-hover);
-  color: var(--tag-color);
+  color: var(--button-foreground-1);
   padding: 2px 4px;
   border-radius: 3px;
 }
 
 .multi-select-pill-content, .multi-select-pill-remove-button {
   background-color: var(--tag-capsule-color);
-  color: var(--tag-color);
+  color: var(--button-foreground-1);
   padding: 2px 4px;
   border-radius: 3px;
 }
@@ -977,7 +973,7 @@ li::marker {
     color: #ACEEEE;
 }
 
-/*## Tags in frontmatter */
+/*## Tags in frontmatter (May be outdated, kept just in case I spot a mistake. I think this is covered later by a.tag {...})
 
 .frontmatter-container .tag,
 .frontmatter-container .frontmatter-alias {
@@ -991,7 +987,7 @@ li::marker {
   line-height: 19px;
   border: 1px solid transparent;
   white-space: nowrap;
-}
+} */
 
 /* Active Buttons */
 .nav-action-button.is-active {

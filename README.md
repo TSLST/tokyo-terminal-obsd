@@ -1,11 +1,16 @@
 ---
 Type: Doc
 Use: Readme docs for Tokyo Terminal them, Obsidian version.
-Tags: !!str "#documentation #theme"
+Tags: !!str
+   - "#documentation"
+   - "#theme"
+   - "#obsidian"
+   - "#tokyo-terminal"
+   - "#tokyo-terminal-obsd"
 Creation: 2026-01-15
-Update: 2026-10-26
+Update: 2026-10-30
 Contributors: [神縁]
-Version: !!str 1.5.14
+Version: !!str 1.5.15
 ---
 
 # Tokyo Terminal
@@ -29,17 +34,17 @@ Version: !!str 1.5.14
 ## Description
 -------------------------
 
----
+___
 ### Short Description (for marketplace/extension metadata)
 
 ```plaintext
 Tokyo Terminal is a neon, high-contrast Obsidian theme inspired by a retrofuturist 80s terminal aesthetics, and Tokyo electric nights. Built for clarity and vibrancy, with maximum visual efficiency.
 ```
 
----
+___
 ### Long README Introduction
 
-**Welcome to *tokyo-terminal***, an Obsidian theme (Ported from VS Codium/Code) that transports your editor to a neon-colored terminal circa 1984.
+**Welcome to *tokyo-terminal***, an Obsidian theme (Ported from my VS Codium/Code theme) that transports your editor to a neon-colored terminal circa 1984.
 This isn’t just a color scheme; it’s a high-contrast, high-energy workspace for writers and storytellers who crave **clarity and visual accentuation**.
 
 Transform Obsidian into a neon-lit, retro-futurist terminal with high-contrast colors and synthwave accents inspired by Tokyo electric nights aesthetics.
@@ -73,8 +78,8 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 | BrightYellow    | `#ffe61c` | Keywords, Header 1                                                          |
 | Yellow          | `#fe8019` | FDunction calls, buttons, expandvars, Header 2                              |
 | BrightMagenta   | `#8b5cf6` | Activity/hover accent, Header 3                                             |
-| BrightGreen     | `#A3FF8C` | Strings, hashtags                                                           |
-| Green           | `#7fff00` | Comments in some languages, math symbols in KaTeX                           |
+| BrightGreen     | `#A3FF8C` | Strings                                                                     |
+| Green           | `#7fff00` | Comments in some languages, math symbols in KaTeX, hashtags                 |
 | BrightRed       | `#FF3B3B` | Errors and Bool = false                                                     |
 | Blue            | `#3465a4` | Links                                                                       |
 | BrightBlue      | `#0285f9` | Rarely used super accent, Header 6                                          |
@@ -120,7 +125,7 @@ For developers/writers nostalgic of the future. For those who conceptualize like
 ![Tokyo Terminal in Action](images/screenshot1.png)
 ![Color Palette](images/palette.png)
 
----
+***
 **Made by 神縁 in 2026 under TSLST License**
 [GitHub](https://github.com/TSLST)
 [Mastodon](https://mastodon.social/@TSLST) Even though I don't actually like Mastodon

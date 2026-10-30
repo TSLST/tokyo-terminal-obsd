@@ -11,3 +11,6 @@ I may release 1.5.11 if I find other minor discrepancies with my liking but this
 I corrected the table headers to have text on accent applied and all thead row background accented (It was only 2n+2 = every other row, I changed it to n = all). I corrected the checkboxes colors and also the unrendered callout name to look fancier. HTML attribute are now correctly aligned with VS Code theme. I cannot change the in-code color of the attributes string to light green nor the color of the main text to cyan. Colors strong and italic unrendered are different to look smoother when writing in quote blocks; rendered are normal strong and italic colors. Also changed the weight of the highlights but would rather have changes the size of the font as well though I believe the whole line would be affected, so weight does the job.
 - **2026-10-26T17:22+02:00**:<br>
 Corrected inquote tags color to a bright green both in edit and view mode.
+- **2026-10-30T19:21+02:00**:<br>
+PROD *v1.5.15*
+YAML tags color changed back to white rather than green. Bright Green is kept for hashtags and comments. Considering reverting hashtags to link-blue.
